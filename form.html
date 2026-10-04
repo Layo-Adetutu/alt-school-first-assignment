@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALT School Africa Application Form</title>
+</head>
+
+<body>
+
+    <header>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="form.html">Application Form</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <header>
+                <h1>ALT School Africa Application Form</h1>
+                <p>Apply to the School of Engineering.</p>
+            </header>
+
+            <form action="#" method="post">
+
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <p>
+                        <label for="first-name">First Name:</label>
+                        <input
+                            type="text"
+                            id="first-name"
+                            name="first_name"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="last-name">Last Name:</label>
+                        <input
+                            type="text"
+                            id="last-name"
+                            name="last_name"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="email">Email Address:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="phone">Phone Number:</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="date-of-birth">Date of Birth:</label>
+                        <input
+                            type="date"
+                            id="date-of-birth"
+                            name="date_of_birth"
+                            required
+                        >
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Programme Information</legend>
+
+                    <p>
+                        <label for="school">School:</label>
+                        <select id="school" name="school" required>
+                            <option value="">Select a school</option>
+                            <option value="engineering">
+                                School of Engineering
+                            </option>
+                            <option value="product">
+                                School of Product
+                            </option>
+                            <option value="data">
+                                School of Data
+                            </option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="programme">Programme:</label>
+                        <select id="programme" name="programme" required>
+                            <option value="">Select a programme</option>
+                            <option value="ai-fullstack">
+                                AI-Powered Fullstack Engineering
+                            </option>
+                            <option value="backend">
+                                Backend Engineering
+                            </option>
+                            <option value="frontend">
+                                Frontend Engineering
+                            </option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="country">Country:</label>
+                        <input
+                            type="text"
+                            id="country"
+                            name="country"
+                            value="Nigeria"
+                            required
+                        >
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Information</legend>
+
+                    <p>
+                        <label for="how-heard">
+                            How did you hear about ALT School?
+                        </label>
+                        <select id="how-heard" name="how_heard">
+                            <option value="">Select an option</option>
+                            <option value="social-media">Social Media</option>
+                            <option value="friend">Friend or Family</option>
+                            <option value="search">Search Engine</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="message">Why do you want to join ALT School?</label>
+                        <br>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            cols="40"
+                            required
+                        ></textarea>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <button type="submit">Submit Application</button>
+                    <button type="reset">Reset Form</button>
+                </p>
+
+            </form>
+            <section>
+                    <h2>Quick Information</h2>
+
+                    <details>
+                        <summary>What is the World Wide Web?</summary>
+                        <p>
+                            The World Wide Web is a system of interconnected documents and
+                            resources that can be accessed through the internet using web browsers.
+                        </p>
+                    </details>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>Address: Lagos, Nigeria</p>
+
+        <p>
+            Email:
+            <a href="mailto:isatoyosi@gmail.com">isatoyosi@gmail.com</a>
+        </p>
+
+        <p>
+            GitHub:
+            <a
+                href="https://github.com/layo-adetutu"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub Profile
+            </a>
+        </p>
+
+        <p>&copy; 2026 Oluwatoyosi Adetutu Isa. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
