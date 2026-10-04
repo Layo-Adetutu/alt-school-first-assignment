@@ -1,42 +1,28 @@
-function diffObjects(oldObj, newObj) {
-    const added = {};
-    const removed = {};
-    const changed = {};
+function deepFreeze(obj) {
+    if (obj === null || typeof obj !== "object") {
+        return obj;
+    }
 
-    for (const key of Object.keys(newObj)) {
-        if (!Object.hasOwn(oldObj, key)) {
-            added[key] = newObj[key];
-        } else if (oldObj[key] !== newObj[key]) {
-            changed[key] = {
-                from: oldObj[key],
-                to: newObj[key]
-            };
+    for (const value of Object.values(obj)) {
+        if (value !== null && typeof value === "object") {
+            deepFreeze(value);
         }
     }
 
-    for (const key of Object.keys(oldObj)) {
-        if (!Object.hasOwn(newObj, key)) {
-            removed[key] = oldObj[key];
-        }
-    }
-
-    return {
-        added,
-        removed,
-        changed
-    };
+    return Object.freeze(obj);
 }
 
-const oldObj = {
-    name: "Emi",
-    role: "Engineer",
-    country: "Jamaica"
-};
+const config = deepFreeze({
+    api: {
+        baseUrl: "https://x.com",
+        retries: 3
+    },
+    debug: false
+});
 
-const newObj = {
-    name: "Emi",
-    role: "Senior Engineer",
-    city: "Kingston"
-};
+config.api.baseUrl = "https://changed.com";
+config.debug = true;
 
-console.log(diffObjects(oldObj, newObj));
+console.log(config.api.baseUrl); // "https://x.com"
+console.log(config.debug);       // false
+console.log(Object.isFrozen(config.api)); // true
